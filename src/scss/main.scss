@@ -1,0 +1,15 @@
+@use "./partials/vars" as *;
+@use "./partials/general" as *;
+
+@import "@fontsource/montserrat/index.css";
+
+body {
+  font-family: $main-font;
+  color: white;
+  background-color: $primary-color;
+  min-height: 100vh;
+}
+
+img {
+  max-height: 100%;
+}
