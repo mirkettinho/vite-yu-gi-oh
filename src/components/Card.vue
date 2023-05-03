@@ -4,17 +4,22 @@
 
 
 export default {
-  name: "Card"
+  name: "Card",
+  props:{
+    name: String,
+    type: String,
+    img: Object
+  }
 }
 </script>
 
 <template>
   <div class="card"> 
     <div>
-      <img src="https://images.ygoprodeck.com/images/cards/652362.jpg" alt="">
+      <img :src="img.image_url" :alt="image">
     </div>
-    <h3>name</h3>
-    <h4>type</h4>
+    <h5>{{name}}</h5>
+    <h6>{{type}}</h6>
   </div>
 </template>
 
@@ -27,7 +32,7 @@ export default {
   background-color: $primary-color;
   width: calc(100% / 6);
   margin-bottom: 30px;
-
+  
   div{
   height: 300px;
   }

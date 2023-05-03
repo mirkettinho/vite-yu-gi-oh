@@ -19,20 +19,13 @@ export default {
 <template>
   <div class="container">
     <div class="foundCard">
-      <span>Found 39 cards</span>
+      <span>Found {{ store.cardslist.length }} cards</span>
     </div>
 
     <div class="row">
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
 
+      <Card v-for="card  in store.cardslist" :key="card"
+      :img="card.card_images[0]" :name="card.name" :type="card.type"/>
     </div>
   </div>
 </template>
